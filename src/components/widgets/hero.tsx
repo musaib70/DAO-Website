@@ -26,7 +26,7 @@ const hero = () => {
     
     <div className=''>
             <Image src = {web}
-                    alt = "loading..."
+                    alt = "loading...."
                     height={700}
                     width = {700}
                      /> 
