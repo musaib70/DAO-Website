@@ -20,7 +20,7 @@ const hero = () => {
     <p className='flex mx-2 my-2 text-slate-900	text-sm text-justify'>A One and Quarter Years Panaverse DAO Earn as you Learn Program Getting Ready for the Next Generation of the Internet</p>
     <p className='flex mx-2 my-2 text-slate-900	text-sm text-justify'>Consolidating Web 3.0, Metaverse, Artificial Intelligence (AI), Cloud, Edge, Ambient Computing/IoT, Network Automation, and Bioinformatics Technologies</p>
     <div className=' mt-6'>
-    <Button> Learn More </Button>
+    <Button>Enroll Now </Button>
     {/* <br />
     <Button> Click me </Button> */}
     </div>
