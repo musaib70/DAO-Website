@@ -10,7 +10,7 @@ import Link from 'next/link';
 const header = () => {
   return (
     
-    <header className='flex justify-between  my-2 px-4 py-4 item-center max-w-screen-xl mx-auto bg-white sticky top-0'>
+    <header className='flex bg-opacity-95 justify-between  my-2 px-2 py-2 item-center max-w-screen-xl mx-auto bg-white sticky top-0'>
          <div><Image
          src= {Logo}
          alt = "loading..."
