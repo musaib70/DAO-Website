@@ -1,7 +1,7 @@
 import React from 'react'
 import  Wrapper  from "@/components/shared/wrapper";
 import Image from 'next/image';
-import web  from "public/web.png";
+import web  from "public/header1.png";
 import Button from "@/components/shared/button";
 
 

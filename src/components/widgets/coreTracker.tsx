@@ -50,6 +50,7 @@ Tracker.map ((item) => {
     return(
         
         <QuaterBox
+        key={item.NumberNumber}
          Description={item.descriptions}
           Header={item.header}
            Number={item.Number} 
