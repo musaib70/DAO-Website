@@ -25,7 +25,7 @@ const Tracker = [
 
 const coreTracker = () => {
   return (
-    <section className='py-6 px-2 sm:mx-2 sm:my-6'>
+    <section className='py-6 px-2 sm:mx-2 sm:my-6 '>
     
         <Wrapper>
 
@@ -42,7 +42,7 @@ const coreTracker = () => {
 
 {/* Quater Box */}
 
-<div className='sm:flex gap-x-4 gap-y-4'>
+<div className=' sm:flex gap-x-4 gap-y-4 sticky -z-40 '>
  
     {
 Tracker.map ((item) => { 
@@ -50,7 +50,7 @@ Tracker.map ((item) => {
     return(
         
         <QuaterBox
-        key={item.NumberNumber}
+        key={item.Number}
          Description={item.descriptions}
           Header={item.header}
            Number={item.Number} 

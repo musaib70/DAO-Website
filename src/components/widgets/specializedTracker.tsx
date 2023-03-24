@@ -5,18 +5,6 @@ import Wrapper from "@/components/shared/wrapper"
 import Button from "@/components/shared/button"
 import  Image  from 'next/image';
 
-// const Tracker = [
-//     {
-//         header: "Quarter IV",
-//         description: "W2-201: Developing Planet-Scale Web 2.0 Serverless Cloud Cloud Apps and APIs using Next.js 13 and Cloud Development Kit (CDK) for Terraform",
-//         number: 4
-//     },
-//     {
-//         header: "Quarter V",
-//         description: "W2-201: Developing Planet-Scale Web 2.0 Serverless Cloud Cloud Apps and APIs using Next.js 13 and Cloud Development Kit (CDK) for Terraform",
-//         number: 5
-//     }
-// ]
 
 const sideObject = [
     {
@@ -27,7 +15,7 @@ const sideObject = [
         image: <img
             src={'w1.png'}
              alt= "loading..."
-              className='h-20 w-32'
+              className='h-20 w-32 flex-shrink-0'
                />,
          Quaters:      
     [
@@ -49,9 +37,9 @@ const sideObject = [
         Description: "Artificial Intelligence (AI) and Deep Learning Specialization",
         Description1:"The AI and Deep Learning specialization focuses on building and deploying intelligent APIs using OpenAI models and building custom Deep Learning Tensorflow models.",
         image: <img
-        src={'a1.png'}
+        src={'i1.png'}
          alt= "loading..."
-          className='h-20 w-32'
+          className='h-20 w-32 flex-shrink-0'
            />,
            Quaters:      
            [
@@ -74,9 +62,9 @@ const sideObject = [
         Description: "Cloud-Native Computing Specialization",
         Description1: "The Cloud-Native Computing Specialization focuses on Containers, Kubernetes, and CDK for Kubernetes.",
         image: <img
-        src={'i1.png'}
+        src={'a1.png'}
          alt= "loading..."
-          className='h-20 w-32'
+          className='h-20 w-32 flex-shrink-0'
            />,
            Quaters:      
            [
@@ -91,9 +79,84 @@ const sideObject = [
                    number: 5
                }
            ],
+    },
+
+    {
+        slug: "iot",
+        Header: "Specialized Program",
+        Description: "Ambient Computing and IoT Specialization",
+        Description1:`The Ambient Computing and IoT Specialization focuses on building Smart Homes, Offices, Factories, and Cities using Voice computing, Matter Protocol, and Embedded Devices. `,
+        image: <img
+            src={'iot.png'}
+             alt= "loading..."
+              className='h-20 w-32 flex-shrink-0'
+               />,
+         Quaters:      
+    [
+        {
+            header: "Quarter IV",
+            description: "AC-351: Ambient Computing with Voice Assistants and Matter Devices",
+            number: 4
+        },
+        {
+            header: "Quarter V",
+            description: "AC-361: Embedded Programming using C and Rust",
+            number: 5
+        }
+    ],
+},
+{
+    slug: "gps",
+    Header: "Specialized Program",
+    Description: "Genomics and Bioinformatics Specialization",
+    Description1:`Genomics is the study of the total genetic makeup of individual organisms, and how this genetic information is structured, functions, and has evolved; bioinformatics encompasses a diverse range of analytical methods and tools applied to genomic data. This Specialization focuses on performing complex bioinformatics analysis using the most essential Python libraries and applications. `,
+    image: <img
+        src={'gbs.png'}
+         alt= "loading..."
+          className='h-20 w-32 flex-shrink-0'
+           />,
+     Quaters:      
+[
+    {
+        header: "Quarter IV",
+        description: "Bio-351: Python for Biologists",
+        number: 4
+    },
+    {
+        header: "Quarter V",
+        description: "Bio-361: Bioinformatics with Python",
+        number: 5
     }
+],
+},
+
+{
+    slug: "npa",
+    Header: "Specialized Program",
+    Description: "Network Programmability and Automation Specialization",
+    Description1:`More than ever, network engineers are finding it challenging to complete their duties entirely manually. Network automation is now crucial due to new protocols, technologies, delivery models, and the requirement for enterprises to become more adaptable and agile. This course teaches network engineers how to automate systems with code using a variety of technologies and tools, including Linux, Python, APIs, and Git.`,
+    image: <img
+        src={'aii.png'}
+         alt= "loading..."
+          className='h-20 w-32 flex-shrink-0'
+           />,
+     Quaters:      
+[
+    {
+        header: "Quarter IV",
+        description: "NPA-351: CCNA 200-301 Certification",
+        number: 4
+    },
+    {
+        header: "Quarter V",
+        description: "NPA-361: Network Programmability and Automation",
+        number: 5
+    }
+],
+},
     
 ]
+
 
 
 const specializedTracker = () => {
@@ -104,18 +167,18 @@ const specializedTracker = () => {
 
   return (
 
-<section className='px-4 py-6'>
+<section className='px-4 py-6 flex-col md:flex-row flex-1 '>
     <Wrapper> 
-        <div className='items-center flex-1 flex-col sm:flex-row max-w-screen-sm'>
+        <div className='items-center flex-1 '>
                
             <h2 className='mt-2 font-bold text-3xl sm:text-4xl'>Specialized Tracks:</h2>
             <p className='mt-3 text-slate-900	text-sm  text-justify'>After completing the first three quarters the participants will select one or more specializations consisting of two courses each: </p>
         </div>
 
 
-        <div className='flex gap-x-8 gap-y-6'>
+        <div className='flex gap-x-8 gap-y-6 sm:flex-row  md:flex-row flex-col-reverse'>
         
-        <div className='border rounded-lg  border-gray-300 sm:w-8/12 px-8 py-24 mt-10'>
+        <div className='border rounded-lg self-start  border-gray-300 sm:w-8/12 px-8 py-10 mt-10 shadow-lg sticky top-24 -z-50 '>
         <p className='text-slate-600 text-sm font-semibold'> {setselectedData?.Header}</p>
         <h4 className='mt-2 font-bold text-2xl  max-w-md'>{setselectedData?.Description}</h4>
             <p className='mt-3 text-slate-900 text-sm max-w-xl '> {setselectedData?.Description1} </p>
@@ -147,19 +210,20 @@ const specializedTracker = () => {
 </div>
 </div>
 
-<div className='  w-4/12  py-16 mt-10 cursor-pointer'>
+<div className='  w-auto  md:w-4/12  py-6  cursor-pointer divide-y-2 divide-slate-400/[.24] divide-y-reverse  '> 
 {
 sideObject.map((item,i) => {
     return(
       
-<div onClick={() => selecttItem (item.slug)} key={i} className='flex flex-shrink-0 object-cover space-x-4  mt-6' >
+<div onClick={() => selecttItem (item.slug)} key={i} className='flex flex-shrink-0 object-cover space-x-4  mt-10   ' >
 
 {item.image}
 
 <div className='flex flex-col '>
 
 <p className='text-slate-600 text-md font-semibold'>{item.Header}</p>
- <h4 className='font-bold text-lg  '>{item.Description}</h4>
+ <h4 className='font-bold text-lg  mb-10'>{item.Description}</h4>
+
 </div>
 </div>
         
@@ -175,19 +239,19 @@ sideObject.map((item,i) => {
 
 
 
-<div className='flex my-40  basis-2'>
+<div className='flex my-40  basis-2 shadow-blue-700 sm:flex-row  flex-col-reverse'>
 
-    <div className='flex-1'>
+    <div className='flex-1 '>
         <img src="footer1.png" alt="loading"  />
     </div>
 
-    <div className='my-8 mx-32 flex-1'>
+    <div className='my-8 sm:mx-32 flex-1'>
 
         <h2 className='font-bold text-3xl sm:text-4xl my-2'>The Outcome for Participants of the Program</h2>
-        <p className='my-8 text-justify text-slate-800 text-md'>As a graduate of this program, you will own valuable products such as Full-Stack App Templates, AR and VR Experiences, and APIs that are marketed globally by the Panaverse DAO. You will also have the opportunity to offer your services at a rate of $50 per hour, providing a path to financial stability while contributing to the growth of Pakistan's software exports.</p>
+        <p className='my-8 sm:text-justify text-slate-800 text-md'>As a graduate of this program, you will own valuable products such as Full-Stack App Templates, AR and VR Experiences, and APIs that are marketed globally by the Panaverse DAO. You will also have the opportunity to offer your services at a rate of $50 per hour, providing a path to financial stability while contributing to the growth of Pakistan's software exports.</p>
     
 
-    <div className='grid grid-cols-2 gap-x-8 gap-y-2 text-slate-900 text-md font-semibold'>
+    <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2 text-slate-900 text-md font-semibold shadow-blue-700'>
       
         <p className='flex items-center gap-2'>
         <img src="icon1.png" alt="alt" />
